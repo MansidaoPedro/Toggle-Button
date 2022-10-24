@@ -1,0 +1,43 @@
+.toggle-button{
+  position: absolute; /*Absolute to stik without messing the text on the same row...*/
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+.toggle-button .bar{
+  height: 3px;
+  width: 100%;
+  background-color: black;
+}
+@media(max-width: 600px){
+  .toggle-button{
+    display: flex;
+  }
+  .linknavs{
+    display: none;
+    width: 100%;
+  }
+  .navbar{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .linknavs ul{
+    width: 100%; /* This will allaw to define the position for the toggleButton */
+    flex-direction: column;
+
+  }
+  .linknavs li{
+    text-align: right;
+    /* for the text to be aligned we have to define the width to 100% on the .linknavs ul */
+  }
+  .linknavs li a{
+    padding: .5rem 1rem;
+  }
+  .linknavs.active{
+    display: flex;
+  }
+}
